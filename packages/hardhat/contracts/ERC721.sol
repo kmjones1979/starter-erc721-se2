@@ -12,7 +12,7 @@ import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.
  * A smart contract for an ERC=721 NFT with minting and admin roles.
  * @author Kevin Jones
  */
-contract NFT is
+contract ERC721 is
     Initializable,
     OwnableUpgradeable,
     ERC721Upgradeable,

@@ -8,14 +8,14 @@ import { Contract } from "ethers";
  *
  * @param hre HardhatRuntimeEnvironment object.
  */
-const deployNFT: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const deployERC721: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
   const owner = "0x007E483Cf6Df009Db5Ec571270b454764d954d95";
   const minter = "0x007E483Cf6Df009Db5Ec571270b454764d954d95";
 
-  await deploy("NFT", {
+  await deploy("ERC721", {
     from: deployer,
     proxy: {
       execute: {
@@ -30,10 +30,10 @@ const deployNFT: DeployFunction = async function (hre: HardhatRuntimeEnvironment
     autoMine: true,
   });
 
-  const NFT = await hre.ethers.getContract<Contract>("NFT", deployer);
-  await NFT.transferOwnership(owner);
+  const ERC721 = await hre.ethers.getContract<Contract>("ERC721", deployer);
+  await ERC721.transferOwnership(owner);
 };
 
-export default deployNFT;
+export default deployERC721;
 
-deployNFT.tags = ["NFT"];
+deployERC721.tags = ["ERC721"];

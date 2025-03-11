@@ -172,7 +172,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    NFT: {
+    ERC721: {
       address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
       abi: [
         {
@@ -1160,7 +1160,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    NFT_Implementation: {
+    ERC721_Implementation: {
       address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
       abi: [
         {
@@ -2013,7 +2013,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    NFT_Proxy: {
+    ERC721_Proxy: {
       address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
       abi: [
         {
